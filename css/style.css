@@ -1,0 +1,188 @@
+:root {
+  --primary-color: #2D3248;
+  --secondary-color: #6A6F81;
+  --background-color: #19A2AE;
+  --main-font: 'Kumbh Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 360px;
+  min-height: 667px;
+  padding: 146px 24px;
+  background-color: var(--background-color);
+  background-image: url("../images/bg-pattern-top.svg"), 
+  url("../images/bg-pattern-bottom.svg");
+  background-position: top left, 
+  bottom right;
+  background-repeat: no-repeat, 
+  no-repeat;
+  background-size: 300px;
+}
+
+.profile-card__image-container {
+  display: flex;
+  min-width: 326px;
+  height: 140px;
+}
+
+.profile-card__image-container img {
+  width: 326px;
+  border-radius: 20px 20px 0 0;
+}
+
+.profile-card__container {
+  display: flex;
+  flex-direction: column;
+  width: 326px;
+  height: 234px;
+  background-color: #FFFFFF;
+  border-radius: 0 0 20px 20px;
+}
+
+.profile-card__picture-container {
+  position: relative;
+}
+
+.profile-card__picture-container img {
+  position: absolute;
+  top: -50px;
+  left: 109px;
+  border-radius: 50px;
+  border: 5px solid #FFF;
+}
+
+.profile-card__user-info {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-rows: 2fr 2fr 2fr;
+  grid-template-areas: 
+  ". . ."
+  ". name age"
+  ". location .";
+  margin-top: 55px;
+  margin-bottom: 29px;
+}
+
+.profile-card__user-name {
+  grid-area: name;
+  align-self: center;
+  justify-self: center;
+  font-family: var(--main-font);
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1rem;
+  color: var(--primary-color);
+}
+
+.profile-card__user-age {
+  grid-area: age;
+  align-self: center;
+  margin-left: 5px;
+  font-family: var(--main-font);
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1rem;
+  color: var(--secondary-color);
+}
+
+.profile-card__user-location {
+  grid-area: location;
+  justify-self: center;
+  margin-top: 15px;
+  font-family: var(--main-font);
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1rem;
+  color: var(--secondary-color);
+}
+
+.profile-card__user-stats {
+  display: grid;
+  grid-template-columns: 70px 120px 70px;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "followers-stats likes-stats photos-stats"
+  "followers likes photos";
+  place-content: center;
+  padding-top: 23px;
+  border-top: 1px solid #e8e8e8;
+}
+
+.profile-card__user-stats h3 {
+  font-family: var(--main-font);
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1rem;
+  color: var(--primary-color);
+}
+
+.profile-card__user-stats p {
+  margin-top: 6px;
+  font-family: var(--main-font);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1rem;
+  color: var(--secondary-color);
+}
+
+.profile-card__followers-stats {
+  grid-area: followers-stats;
+  align-self: center;
+  justify-self: center;
+}
+
+.profile-card__followers {
+  grid-area: followers;
+  align-self: center;
+  justify-self: center;
+}
+
+.profile-card__likes-stats {
+  grid-area: likes-stats;
+  align-self: center;
+  justify-self: center;
+}
+
+.profile-card__likes {
+  grid-area: likes;
+  align-self: center;
+  justify-self: center;
+}
+
+.profile-card__photos-stats {
+  grid-area: photos-stats;
+  align-self: center;
+  justify-self: center;
+}
+
+.profile-card__photos {
+  grid-area: photos;
+  align-self: center;
+  justify-self: center;
+}
+
+footer {
+  background-color: var(--background-color);
+  text-decoration: none;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+footer a {
+  color: var(--primary-color);
+}
